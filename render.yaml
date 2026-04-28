@@ -1,0 +1,24 @@
+services:
+  - type: web
+    name: nexlayer-api
+    runtime: python
+    rootDir: backend
+    plan: free
+    region: oregon
+    buildCommand: pip install -r requirements.txt
+    startCommand: uvicorn main:app --host 0.0.0.0 --port $PORT
+    envVars:
+      - key: PYTHON_VERSION
+        value: 3.12.4
+      - key: FRONTEND_ORIGINS
+        value: https://nexlayer.vercel.app,http://localhost:5173
+      - key: NOTIFY_EMAIL
+        value: renzogutierrez966111@gmail.com
+      - key: SMTP_HOST
+        sync: false
+      - key: SMTP_PORT
+        value: "587"
+      - key: SMTP_USER
+        sync: false
+      - key: SMTP_PASSWORD
+        sync: false

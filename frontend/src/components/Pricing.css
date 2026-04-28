@@ -1,0 +1,114 @@
+.pricing-head { margin-bottom: 56px; }
+
+.pricing-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 18px;
+}
+
+.pricing-card {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  padding: 28px 24px;
+  border-radius: var(--radius-lg);
+  background: linear-gradient(180deg, rgba(14, 26, 56, 0.55), rgba(14, 26, 56, 0.18));
+  border: 1px solid var(--color-border);
+  transition: transform 0.3s ease, border-color 0.3s ease, background 0.3s ease;
+}
+
+.pricing-card:hover {
+  transform: translateY(-4px);
+  border-color: var(--color-border-strong);
+}
+
+.pricing-card.is-featured {
+  background: linear-gradient(180deg, rgba(31, 111, 255, 0.18), rgba(14, 26, 56, 0.4));
+  border-color: var(--color-border-strong);
+  box-shadow: 0 30px 80px -25px rgba(31, 111, 255, 0.5);
+}
+
+.pricing-card.is-accent {
+  border-color: rgba(0, 229, 160, 0.4);
+  background: linear-gradient(180deg, rgba(0, 229, 160, 0.08), rgba(14, 26, 56, 0.45));
+}
+
+.pricing-badge {
+  position: absolute;
+  top: -12px;
+  left: 24px;
+  font-family: var(--font-mono);
+  font-size: 0.68rem;
+  text-transform: uppercase;
+  letter-spacing: 0.14em;
+  padding: 5px 12px;
+  border-radius: 999px;
+  background: var(--color-primary);
+  color: #fff;
+}
+
+.pricing-badge-accent { background: var(--color-accent); color: #052619; }
+
+.pricing-name { font-size: 1.3rem; }
+
+.pricing-summary {
+  color: var(--color-text-muted);
+  font-size: 0.9rem;
+  min-height: 42px;
+}
+
+.pricing-price {
+  display: flex;
+  align-items: baseline;
+  gap: 4px;
+  padding: 14px 0;
+  border-top: 1px solid var(--color-border);
+  border-bottom: 1px solid var(--color-border);
+}
+
+.pricing-price-amount {
+  font-family: var(--font-display);
+  font-size: 2rem;
+  font-weight: 700;
+  color: var(--color-text);
+}
+
+.pricing-price-period {
+  font-family: var(--font-mono);
+  font-size: 0.85rem;
+  color: var(--color-text-muted);
+}
+
+.pricing-features {
+  list-style: none;
+  display: grid;
+  gap: 10px;
+  padding: 0;
+  margin: 0;
+  flex: 1;
+}
+
+.pricing-features li {
+  display: flex;
+  align-items: flex-start;
+  gap: 10px;
+  font-size: 0.9rem;
+  color: var(--color-text);
+}
+
+.pricing-features svg {
+  color: var(--color-accent);
+  flex-shrink: 0;
+  margin-top: 4px;
+}
+
+.pricing-cta { margin-top: 6px; width: 100%; }
+
+@media (max-width: 1080px) {
+  .pricing-grid { grid-template-columns: repeat(2, 1fr); }
+}
+
+@media (max-width: 580px) {
+  .pricing-grid { grid-template-columns: 1fr; }
+}

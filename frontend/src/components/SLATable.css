@@ -1,0 +1,80 @@
+.sla-card {
+  margin-top: 56px;
+  padding: 28px;
+  border-radius: var(--radius-lg);
+  background: linear-gradient(180deg, rgba(14, 26, 56, 0.55), rgba(14, 26, 56, 0.2));
+  border: 1px solid var(--color-border);
+}
+
+.sla-card-head {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 18px;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+
+.sla-card-note {
+  font-family: var(--font-mono);
+  font-size: 0.72rem;
+  text-transform: uppercase;
+  letter-spacing: 0.14em;
+  color: var(--color-text-dim);
+}
+
+.sla-table {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.sla-row {
+  display: grid;
+  grid-template-columns: 0.9fr 1.6fr 0.8fr 0.8fr;
+  gap: 14px;
+  align-items: center;
+  padding: 14px 16px;
+  border-radius: var(--radius-md);
+  background: rgba(6, 13, 31, 0.55);
+  border: 1px solid transparent;
+  transition: border-color 0.2s ease, background 0.2s ease;
+}
+
+.sla-row:hover { border-color: var(--color-border); background: rgba(6, 13, 31, 0.85); }
+
+.sla-head {
+  background: transparent;
+  font-family: var(--font-mono);
+  font-size: 0.72rem;
+  text-transform: uppercase;
+  letter-spacing: 0.14em;
+  color: var(--color-text-dim);
+  padding: 6px 16px;
+}
+
+.sla-head:hover { background: transparent; border-color: transparent; }
+
+.sla-pill {
+  display: inline-block;
+  font-family: var(--font-mono);
+  font-size: 0.72rem;
+  text-transform: uppercase;
+  letter-spacing: 0.14em;
+  padding: 5px 12px;
+  border-radius: 999px;
+}
+
+.sla-critical { background: rgba(255, 84, 112, 0.16); color: var(--color-danger); }
+.sla-high     { background: rgba(255, 181, 71, 0.16); color: var(--color-warning); }
+.sla-medium   { background: rgba(31, 111, 255, 0.18); color: #6BA0FF; }
+.sla-low      { background: rgba(0, 229, 160, 0.14); color: var(--color-accent); }
+
+.sla-desc { color: var(--color-text-muted); font-size: 0.92rem; }
+.sla-time { font-family: var(--font-mono); font-size: 0.92rem; color: var(--color-text); }
+
+@media (max-width: 760px) {
+  .sla-row { grid-template-columns: 1fr 1fr; }
+  .sla-head { display: none; }
+  .sla-desc { grid-column: 1 / -1; }
+}

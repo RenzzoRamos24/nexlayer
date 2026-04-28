@@ -1,0 +1,80 @@
+.about-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 64px;
+  align-items: center;
+}
+
+.about-metrics {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 18px;
+  margin-top: 12px;
+}
+
+.about-metric {
+  padding: 22px;
+  border-radius: var(--radius-md);
+  background: linear-gradient(180deg, rgba(14, 26, 56, 0.55), rgba(14, 26, 56, 0.2));
+  border: 1px solid var(--color-border);
+}
+
+.about-metric-value {
+  font-family: var(--font-display);
+  font-weight: 700;
+  font-size: 2.3rem;
+  background: linear-gradient(135deg, #fff 0%, #9FB6FF 100%);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+}
+
+.about-metric-label {
+  font-family: var(--font-mono);
+  font-size: 0.74rem;
+  text-transform: uppercase;
+  letter-spacing: 0.14em;
+  color: var(--color-text-muted);
+  margin-top: 4px;
+}
+
+.about-pillars {
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+}
+
+.about-pillar {
+  position: relative;
+  padding: 24px 26px;
+  border-radius: var(--radius-md);
+  background: rgba(14, 26, 56, 0.4);
+  border: 1px solid var(--color-border);
+  transition: border-color 0.3s ease, transform 0.3s ease, background 0.3s ease;
+}
+
+.about-pillar:hover {
+  border-color: var(--color-border-strong);
+  background: rgba(14, 26, 56, 0.65);
+  transform: translateX(4px);
+}
+
+.about-pillar-num {
+  font-family: var(--font-mono);
+  font-size: 0.78rem;
+  letter-spacing: 0.16em;
+  color: var(--color-accent);
+  display: block;
+  margin-bottom: 8px;
+}
+
+.about-pillar h3 { margin-bottom: 6px; }
+
+.about-pillar p {
+  color: var(--color-text-muted);
+  font-size: 0.95rem;
+}
+
+@media (max-width: 980px) {
+  .about-grid { grid-template-columns: 1fr; gap: 40px; }
+}

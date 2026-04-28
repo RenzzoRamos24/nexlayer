@@ -1,0 +1,254 @@
+.fleet-grid {
+  display: grid;
+  grid-template-columns: 0.9fr 1.1fr;
+  gap: 56px;
+  align-items: center;
+}
+
+.fleet-bullets {
+  list-style: none;
+  margin: 0 0 32px;
+  padding: 0;
+  display: grid;
+  gap: 12px;
+}
+
+.fleet-bullets li {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  font-size: 0.98rem;
+  color: var(--color-text);
+}
+
+.bullet-check {
+  width: 22px;
+  height: 22px;
+  border-radius: 50%;
+  background: rgba(0, 229, 160, 0.14);
+  border: 1px solid rgba(0, 229, 160, 0.4);
+  position: relative;
+  flex-shrink: 0;
+}
+
+.bullet-check::after {
+  content: '';
+  position: absolute;
+  top: 5px; left: 7px;
+  width: 5px; height: 9px;
+  border: solid var(--color-accent);
+  border-width: 0 2px 2px 0;
+  transform: rotate(45deg);
+}
+
+.fleet-cta { display: flex; gap: 12px; flex-wrap: wrap; }
+
+.fleet-panel {
+  position: relative;
+  padding: 26px;
+  border-radius: var(--radius-xl);
+  background: linear-gradient(180deg, rgba(14, 26, 56, 0.85), rgba(14, 26, 56, 0.55));
+  border: 1px solid var(--color-border-strong);
+  box-shadow: var(--shadow-glow);
+  backdrop-filter: blur(8px);
+}
+
+.fleet-panel::before {
+  content: '';
+  position: absolute;
+  inset: -1px;
+  border-radius: inherit;
+  padding: 1px;
+  background: linear-gradient(135deg, rgba(31, 111, 255, 0.5), transparent 40%, rgba(0, 229, 160, 0.3));
+  -webkit-mask: linear-gradient(#000, #000) content-box, linear-gradient(#000, #000);
+  -webkit-mask-composite: xor;
+  mask-composite: exclude;
+  pointer-events: none;
+}
+
+.fleet-panel-head {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  margin-bottom: 22px;
+}
+
+.fleet-panel-label {
+  display: inline-block;
+  font-family: var(--font-mono);
+  font-size: 0.72rem;
+  text-transform: uppercase;
+  letter-spacing: 0.18em;
+  color: var(--color-accent);
+  margin-bottom: 6px;
+}
+
+.fleet-panel-title { font-size: 1.4rem; }
+
+.fleet-panel-meta {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-family: var(--font-mono);
+  font-size: 0.82rem;
+  color: var(--color-text-muted);
+}
+
+.fleet-panel-summary {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 12px;
+  margin-bottom: 18px;
+}
+
+.fleet-panel-summary > div {
+  padding: 14px 16px;
+  border-radius: var(--radius-md);
+  background: rgba(6, 13, 31, 0.6);
+  border: 1px solid var(--color-border);
+}
+
+.summary-label {
+  font-family: var(--font-mono);
+  font-size: 0.7rem;
+  text-transform: uppercase;
+  letter-spacing: 0.14em;
+  color: var(--color-text-dim);
+  margin-bottom: 4px;
+}
+
+.summary-value {
+  font-family: var(--font-display);
+  font-size: 1.5rem;
+  font-weight: 700;
+}
+
+.summary-alert { color: var(--color-danger); }
+
+.fleet-list {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  max-height: 420px;
+  overflow-y: auto;
+  padding-right: 4px;
+}
+
+.fleet-row {
+  display: grid;
+  grid-template-columns: 1.1fr 1fr 1.5fr;
+  gap: 14px;
+  align-items: center;
+  padding: 14px 16px;
+  border-radius: var(--radius-md);
+  background: rgba(6, 13, 31, 0.55);
+  border: 1px solid var(--color-border);
+  transition: transform 0.4s ease, border-color 0.3s ease, background 0.3s ease;
+}
+
+.fleet-row.status-moving { animation: rowSlide 0.6s ease; }
+
+@keyframes rowSlide {
+  from { transform: translateX(-6px); opacity: 0.85; }
+  to   { transform: translateX(0); opacity: 1; }
+}
+
+.fleet-row:hover { border-color: var(--color-border-strong); }
+
+.fleet-row-id { display: flex; align-items: center; gap: 12px; }
+
+.fleet-row-dot {
+  width: 10px; height: 10px;
+  border-radius: 50%;
+  background: var(--color-text-dim);
+  flex-shrink: 0;
+}
+
+.status-moving  .fleet-row-dot { background: var(--color-accent);  box-shadow: 0 0 10px rgba(0, 229, 160, 0.6); }
+.status-idle    .fleet-row-dot { background: var(--color-warning); }
+.status-loading .fleet-row-dot { background: var(--color-primary); box-shadow: 0 0 10px rgba(31, 111, 255, 0.6); }
+.status-alert   .fleet-row-dot { background: var(--color-danger);  box-shadow: 0 0 10px rgba(255, 84, 112, 0.6); }
+
+.fleet-row-code {
+  font-family: var(--font-mono);
+  font-size: 0.85rem;
+  font-weight: 500;
+  color: var(--color-text);
+}
+
+.fleet-row-driver {
+  font-size: 0.78rem;
+  color: var(--color-text-muted);
+}
+
+.fleet-row-route {
+  font-size: 0.88rem;
+  color: var(--color-text-muted);
+}
+
+.fleet-row-stats {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  justify-content: flex-end;
+}
+
+.fleet-stat {
+  display: inline-flex;
+  align-items: baseline;
+  gap: 3px;
+  font-family: var(--font-mono);
+}
+
+.fleet-stat-num { font-size: 0.95rem; color: var(--color-text); }
+.fleet-stat-unit { font-size: 0.7rem; color: var(--color-text-dim); }
+
+.fleet-bat {
+  position: relative;
+  width: 56px;
+  height: 18px;
+  border-radius: 6px;
+  background: rgba(255, 255, 255, 0.05);
+  border: 1px solid var(--color-border);
+  overflow: hidden;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.bat-fill {
+  position: absolute;
+  inset: 0 auto 0 0;
+  background: linear-gradient(90deg, var(--color-primary), var(--color-accent));
+  transition: width 0.6s ease;
+}
+
+.fleet-bat.low .bat-fill { background: linear-gradient(90deg, var(--color-danger), var(--color-warning)); }
+
+.bat-text {
+  position: relative;
+  font-family: var(--font-mono);
+  font-size: 0.7rem;
+  color: #fff;
+  text-shadow: 0 1px 1px rgba(0, 0, 0, 0.6);
+}
+
+.fleet-status {
+  font-family: var(--font-mono);
+  font-size: 0.68rem;
+  text-transform: uppercase;
+  letter-spacing: 0.12em;
+  padding: 4px 10px;
+  border-radius: 999px;
+}
+
+.status-pill-moving  { background: rgba(0, 229, 160, 0.14);  color: var(--color-accent); }
+.status-pill-idle    { background: rgba(255, 181, 71, 0.14); color: var(--color-warning); }
+.status-pill-loading { background: rgba(31, 111, 255, 0.18); color: #6BA0FF; }
+.status-pill-alert   { background: rgba(255, 84, 112, 0.16); color: var(--color-danger); }
+
+@media (max-width: 980px) {
+  .fleet-grid { grid-template-columns: 1fr; gap: 40px; }
+  .fleet-row { grid-template-columns: 1fr; gap: 8px; }
+  .fleet-row-stats { justify-content: flex-start; flex-wrap: wrap; }
+}
