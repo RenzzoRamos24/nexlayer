@@ -1,10 +1,10 @@
 """Nexlayer backend — FastAPI service for landing page contact + fleet demo."""
+import json
 import os
 import random
-import smtplib
-import ssl
+import urllib.error
+import urllib.request
 from datetime import datetime
-from email.message import EmailMessage
 from typing import List, Literal
 
 from dotenv import load_dotenv
@@ -14,10 +14,8 @@ from pydantic import BaseModel, EmailStr, Field
 
 load_dotenv()
 
-SMTP_HOST = os.getenv("SMTP_HOST", "")
-SMTP_PORT = int(os.getenv("SMTP_PORT", "587"))
-SMTP_USER = os.getenv("SMTP_USER", "")
-SMTP_PASSWORD = os.getenv("SMTP_PASSWORD", "")
+RESEND_API_KEY = os.getenv("RESEND_API_KEY", "")
+RESEND_FROM = os.getenv("RESEND_FROM", "Nexlayer <onboarding@resend.dev>")
 NOTIFY_EMAIL = os.getenv("NOTIFY_EMAIL", "renzogutierrez966111@gmail.com")
 FRONTEND_ORIGINS = [o.strip() for o in os.getenv(
     "FRONTEND_ORIGINS",
@@ -107,34 +105,40 @@ def _step(t: dict) -> dict:
 
 
 def _send_notification_email(payload: ContactPayload) -> bool:
-    """Intenta enviar el email de notificación. Devuelve False si SMTP no está configurado."""
-    if not (SMTP_HOST and SMTP_USER and SMTP_PASSWORD):
-        print(f"[contact] SMTP no configurado — payload recibido: {payload.model_dump()}")
+    """Envía el email vía Resend HTTPS API. Devuelve False si no hay API key configurada."""
+    if not RESEND_API_KEY:
+        print(f"[contact] RESEND_API_KEY no configurado — payload recibido: {payload.model_dump()}")
         return False
 
-    msg = EmailMessage()
-    msg["Subject"] = f"[Nexlayer] Nueva consulta de {payload.company}"
-    msg["From"] = SMTP_USER
-    msg["To"] = NOTIFY_EMAIL
-    msg.set_content(
-        f"""Nueva consulta recibida desde la landing de Nexlayer.
-
-Empresa : {payload.company}
-Email   : {payload.email}
-Teléfono: {payload.phone}
-
-Mensaje:
-{payload.message or '(sin mensaje)'}
-
-Recibido: {datetime.utcnow().isoformat()} UTC
-"""
+    body = (
+        f"Nueva consulta recibida desde la landing de Nexlayer.\n\n"
+        f"Empresa : {payload.company}\n"
+        f"Email   : {payload.email}\n"
+        f"Teléfono: {payload.phone}\n\n"
+        f"Mensaje:\n{payload.message or '(sin mensaje)'}\n\n"
+        f"Recibido: {datetime.utcnow().isoformat()} UTC\n"
     )
 
-    context = ssl.create_default_context()
-    with smtplib.SMTP(SMTP_HOST, SMTP_PORT, timeout=10) as server:
-        server.starttls(context=context)
-        server.login(SMTP_USER, SMTP_PASSWORD)
-        server.send_message(msg)
+    data = json.dumps({
+        "from": RESEND_FROM,
+        "to": [NOTIFY_EMAIL],
+        "reply_to": payload.email,
+        "subject": f"[Nexlayer] Nueva consulta de {payload.company}",
+        "text": body,
+    }).encode("utf-8")
+
+    req = urllib.request.Request(
+        "https://api.resend.com/emails",
+        data=data,
+        method="POST",
+        headers={
+            "Authorization": f"Bearer {RESEND_API_KEY}",
+            "Content-Type": "application/json",
+        },
+    )
+    with urllib.request.urlopen(req, timeout=10) as resp:
+        if resp.status >= 300:
+            raise RuntimeError(f"Resend respondió {resp.status}: {resp.read()!r}")
     return True
 
 
