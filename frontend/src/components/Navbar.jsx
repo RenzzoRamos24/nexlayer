@@ -25,11 +25,7 @@ export default function Navbar() {
       <div className="container navbar-inner">
         <a href="#top" className="brand" aria-label="Nexlayer">
           <span className="brand-mark">
-            <svg viewBox="0 0 32 32" width="28" height="28" aria-hidden="true">
-              <rect width="32" height="32" rx="8" fill="#1F6FFF" />
-              <path d="M8 22V10h2.5l8 8.5V10H21v12h-2.5l-8-8.5V22H8z" fill="#fff" />
-              <circle cx="25" cy="9" r="2.5" fill="#00E5A0" />
-            </svg>
+            <img src="/favicon.svg" alt="" width="28" height="28" />
           </span>
           <span className="brand-text">Nexlayer</span>
         </a>

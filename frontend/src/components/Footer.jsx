@@ -19,8 +19,7 @@ const cols = [
   {
     title: 'Soporte',
     links: [
-      { href: 'tel:+51966111242',                                label: '+51 966 111 242' },
-      { href: 'https://linkedin.com/in/renzo-gutiérrez',         label: 'LinkedIn',           external: true }
+      { href: 'tel:+51966111242', label: '+51 966 111 242' }
     ]
   }
 ]
@@ -32,11 +31,7 @@ export default function Footer() {
         <div className="footer-brand">
           <a href="#top" className="brand">
             <span className="brand-mark">
-              <svg viewBox="0 0 32 32" width="28" height="28" aria-hidden="true">
-                <rect width="32" height="32" rx="8" fill="#1F6FFF" />
-                <path d="M8 22V10h2.5l8 8.5V10H21v12h-2.5l-8-8.5V22H8z" fill="#fff" />
-                <circle cx="25" cy="9" r="2.5" fill="#00E5A0" />
-              </svg>
+              <img src="/favicon.svg" alt="" width="28" height="28" />
             </span>
             <span className="brand-text">Nexlayer</span>
           </a>

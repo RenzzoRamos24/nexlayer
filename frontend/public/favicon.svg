@@ -1,1 +1,16 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32"><rect width="32" height="32" rx="8" fill="#060D1F"/><path d="M8 22V10h2.5l8 8.5V10H21v12h-2.5l-8-8.5V22H8z" fill="#1F6FFF"/><circle cx="25" cy="9" r="2.5" fill="#00E5A0"/></svg>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 1200" width="512" height="512">
+  <!-- Fondo azul redondeado -->
+  <rect width="1200" height="1200" rx="220" ry="220" fill="#2563FF"/>
+  
+  <!-- Cuadrado superior izquierdo (blanco, destacado) -->
+  <rect x="250" y="250" width="320" height="320" rx="55" ry="55" fill="#FFFFFF"/>
+  
+  <!-- Cuadrado superior derecho (azul claro) -->
+  <rect x="630" y="250" width="320" height="320" rx="55" ry="55" fill="#A8C5FF"/>
+  
+  <!-- Cuadrado inferior izquierdo (azul claro) -->
+  <rect x="250" y="630" width="320" height="320" rx="55" ry="55" fill="#A8C5FF"/>
+  
+  <!-- Cuadrado inferior derecho (azul claro, ligeramente más tenue) -->
+  <rect x="630" y="630" width="320" height="320" rx="55" ry="55" fill="#8FB5FF"/>
+</svg>

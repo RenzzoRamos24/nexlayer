@@ -137,5 +137,4 @@ curl -X POST http://localhost:8000/api/contact \
 ## Contacto
 
 - 📞 +51 966 111 242
-- 💼 [linkedin.com/in/renzo-gutiérrez](https://linkedin.com/in/renzo-gutiérrez)
 - 📍 Lima, Perú

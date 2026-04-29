@@ -57,25 +57,6 @@ export default function Contact() {
               <li>
                 <span className="contact-list-icon">
                   <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round">
-                    <rect x="2" y="2" width="20" height="20" rx="4" />
-                    <path d="M7 10v8M7 7v.01M11 18v-5a3 3 0 0 1 6 0v5M11 13v5" />
-                  </svg>
-                </span>
-                <div>
-                  <div className="contact-list-label">LinkedIn</div>
-                  <a
-                    href="https://linkedin.com/in/renzo-gutiérrez"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="contact-list-value"
-                  >
-                    linkedin.com/in/renzo-gutiérrez
-                  </a>
-                </div>
-              </li>
-              <li>
-                <span className="contact-list-icon">
-                  <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round">
                     <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z" /><circle cx="12" cy="10" r="3" />
                   </svg>
                 </span>
