@@ -11,7 +11,7 @@ services:
       - key: PYTHON_VERSION
         value: 3.12.4
       - key: FRONTEND_ORIGINS
-        value: https://nexlayer.vercel.app,http://localhost:5173
+        value: https://nexlayer-woad.vercel.app,http://localhost:5173
       - key: NOTIFY_EMAIL
         value: renzogutierrez966111@gmail.com
       - key: SMTP_HOST
