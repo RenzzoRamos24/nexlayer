@@ -134,6 +134,8 @@ def _send_notification_email(payload: ContactPayload) -> bool:
         headers={
             "Authorization": f"Bearer {RESEND_API_KEY}",
             "Content-Type": "application/json",
+            "User-Agent": "Nexlayer-Backend/1.0",
+            "Accept": "application/json",
         },
     )
     try:
