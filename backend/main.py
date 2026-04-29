@@ -136,9 +136,13 @@ def _send_notification_email(payload: ContactPayload) -> bool:
             "Content-Type": "application/json",
         },
     )
-    with urllib.request.urlopen(req, timeout=10) as resp:
-        if resp.status >= 300:
-            raise RuntimeError(f"Resend respondió {resp.status}: {resp.read()!r}")
+    try:
+        with urllib.request.urlopen(req, timeout=10) as resp:
+            if resp.status >= 300:
+                raise RuntimeError(f"Resend respondió {resp.status}: {resp.read()!r}")
+    except urllib.error.HTTPError as exc:
+        body = exc.read().decode("utf-8", errors="replace")
+        raise RuntimeError(f"Resend HTTP {exc.code}: {body}") from exc
     return True
 
 
