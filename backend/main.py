@@ -131,7 +131,7 @@ Recibido: {datetime.utcnow().isoformat()} UTC
     )
 
     context = ssl.create_default_context()
-    with smtplib.SMTP(SMTP_HOST, SMTP_PORT) as server:
+    with smtplib.SMTP(SMTP_HOST, SMTP_PORT, timeout=10) as server:
         server.starttls(context=context)
         server.login(SMTP_USER, SMTP_PASSWORD)
         server.send_message(msg)
@@ -153,8 +153,8 @@ def contact(payload: ContactPayload):
     try:
         delivered = _send_notification_email(payload)
     except Exception as exc:
-        print(f"[contact] error enviando email: {exc}")
-        raise HTTPException(status_code=502, detail="No se pudo enviar la notificación. Intenta nuevamente.")
+        print(f"[contact] SMTP falló — payload guardado en logs: {payload.model_dump()} | error: {exc}")
+        delivered = False
 
     return ContactResponse(ok=True, delivered=delivered, received_at=datetime.utcnow())
 
