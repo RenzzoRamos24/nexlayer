@@ -1,10 +1,10 @@
 import './Hero.css'
 
 const stats = [
-  { value: '99.9%', label: 'Uptime garantizado' },
-  { value: '+120', label: 'Empresas confían' },
+  { value: '99.9%', label: 'Uptime objetivo' },
+  { value: '5+',    label: 'Años de experiencia' },
   { value: '15min', label: 'Respuesta crítica' },
-  { value: '24/7', label: 'Soporte humano' }
+  { value: '24/7',  label: 'Soporte peruano' }
 ]
 
 export default function Hero() {
@@ -16,16 +16,16 @@ export default function Hero() {
       <div className="container hero-inner">
         <span className="tag hero-tag fade-up is-visible">
           <span className="dot-pulse" />
-          Nuevo · Panel de flotas en vivo
+          Nuevo · Plataformas con IA integrada
         </span>
 
         <h1 className="hero-title fade-up is-visible">
-          Infraestructura moderna y <span className="text-accent">soluciones automatizadas</span> para tu operación.
+          Plataformas a medida con <span className="text-accent">automatización e IA</span> para tu operación.
         </h1>
 
         <p className="hero-subtitle fade-up is-visible">
-          Diseñamos, desplegamos y monitoreamos la capa tecnológica que mueve tu negocio:
-          servidores, redes, GPS para flotas y soporte experto cuando todo cuenta.
+          Construimos PaaS para cualquier rubro: integramos IA, automatizamos procesos
+          y conectamos tus sistemas. Diagnóstico previo, despliegue rápido y soporte 100% peruano.
         </p>
 
         <div className="hero-actions fade-up is-visible">

@@ -5,7 +5,7 @@ const cols = [
     title: 'Producto',
     links: [
       { href: '#servicios', label: 'Servicios' },
-      { href: '#flotas',    label: 'Flotas' },
+      { href: '#flotas',    label: 'Plataforma' },
       { href: '#precios',   label: 'Precios' }
     ]
   },

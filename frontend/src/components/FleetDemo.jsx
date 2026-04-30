@@ -56,31 +56,33 @@ export default function FleetDemo() {
       <div className="container">
         <div className="fleet-grid">
           <div className="fleet-copy">
-            <span className="section-eyebrow fade-up">Gestión de flotas</span>
-            <h2 className="section-title fade-up">Tu flota visible en tiempo real, no en hojas de cálculo.</h2>
+            <span className="section-eyebrow fade-up">Ejemplo visual · PaaS a medida</span>
+            <h2 className="section-title fade-up">Plataformas operativas pensadas para tu rubro.</h2>
             <p className="section-subtitle fade-up">
-              Hasta 30 trailers monitoreados con GPS, telemetría de combustible y alertas
-              automáticas. Sabes dónde está cada unidad — y por qué se detuvo.
+              Antes de construir, hacemos un diagnóstico de tu operación. Diseñamos
+              la plataforma — paneles en vivo, integraciones e IA — según lo que
+              realmente necesita tu negocio. Este panel es solo una referencia visual
+              del tipo de soluciones que entregamos.
             </p>
 
             <ul className="fleet-bullets fade-up">
-              <li><span className="bullet-check" /> Ubicación y velocidad en vivo</li>
-              <li><span className="bullet-check" /> Alertas de batería y combustible</li>
-              <li><span className="bullet-check" /> Reportes mensuales automáticos</li>
-              <li><span className="bullet-check" /> Integración con tu ERP</li>
+              <li><span className="bullet-check" /> Diagnóstico previo sin costo</li>
+              <li><span className="bullet-check" /> Diseño 100% a medida del rubro</li>
+              <li><span className="bullet-check" /> Integraciones e IA según necesidad</li>
+              <li><span className="bullet-check" /> Acompañamiento durante toda la implementación</li>
             </ul>
 
             <div className="fleet-cta fade-up">
-              <a href="#precios" className="btn btn-primary">Ver plan Flotas</a>
-              <a href="#contacto" className="btn btn-ghost">Pedir demo</a>
+              <a href="#contacto" className="btn btn-primary">Solicitar diagnóstico</a>
+              <a href="#precios" className="btn btn-ghost">Ver planes</a>
             </div>
           </div>
 
           <div className="fleet-panel fade-up">
             <div className="fleet-panel-head">
               <div>
-                <span className="fleet-panel-label">Live · Panel de control</span>
-                <h3 className="fleet-panel-title">Flota Nexlayer</h3>
+                <span className="fleet-panel-label">Vista previa · Panel ejemplo</span>
+                <h3 className="fleet-panel-title">Plataforma Nexlayer</h3>
               </div>
               <div className="fleet-panel-meta">
                 <span className="dot-pulse" key={pulse} />

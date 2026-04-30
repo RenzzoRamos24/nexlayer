@@ -33,32 +33,32 @@ const plans = [
   },
   {
     name: 'Empresarial',
-    price: 'S/. 2,500',
+    price: 'S/. 3,800',
     period: '/mes',
     summary: 'Para empresas que no toleran caídas ni respuestas lentas.',
     features: [
       'Equipos ilimitados',
-      'Soporte dedicado 24/7',
-      'Ingeniero asignado',
+      'SLA priorizado con tiempos garantizados',
       'Plan de continuidad operativa',
-      'Auditoría de seguridad trimestral'
+      'Mantenimiento mensual programado',
+      'Ingeniero asignado y reportes ejecutivos'
     ],
     cta: 'Hablar con ventas'
   },
   {
-    name: 'Flotas',
-    price: 'S/. 5,000',
-    period: '/mes',
-    summary: 'Gestión completa de flotas con GPS y panel en vivo.',
+    name: 'SaaS + IA',
+    price: 'Desde S/. 12,000',
+    period: '· por proyecto',
+    summary: 'Implementación de plataformas con IA según los requerimientos de tu rubro.',
     accent: true,
     features: [
-      'Hasta 30 trailers con GPS',
-      'Panel de control en tiempo real',
-      'Alertas de combustible y batería',
-      'Reportes mensuales automáticos',
-      'Integración con tu ERP'
+      'Diagnóstico y levantamiento de requerimientos',
+      'Integración con IA aplicada al rubro',
+      'Integración con SUNAT (cuando aplique)',
+      'Desarrollo a medida del cliente',
+      'Soporte 100% peruano post-implementación'
     ],
-    cta: 'Pedir demo'
+    cta: 'Cotizar'
   }
 ]
 
@@ -83,7 +83,7 @@ export default function Pricing() {
               className={`pricing-card fade-up ${p.featured ? 'is-featured' : ''} ${p.accent ? 'is-accent' : ''}`}
             >
               {p.featured && <span className="pricing-badge">Más elegido</span>}
-              {p.accent   && <span className="pricing-badge pricing-badge-accent">Flotas</span>}
+              {p.accent   && <span className="pricing-badge pricing-badge-accent">A medida</span>}
 
               <h3 className="pricing-name">{p.name}</h3>
               <p className="pricing-summary">{p.summary}</p>

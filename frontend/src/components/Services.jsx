@@ -35,8 +35,8 @@ const services = [
   },
   {
     code: '04',
-    title: 'Gestión de flotas',
-    description: 'GPS, telemetría y panel en vivo para hasta 30 trailers. Reduce costos y mejora trazabilidad operativa.',
+    title: 'Plataformas para transportes',
+    description: 'Diseñamos PaaS a medida para empresas de transporte y logística: paneles operativos, integraciones y automatización.',
     icon: (
       <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.6" strokeLinecap="round" strokeLinejoin="round">
         <path d="M3 16V6h11v10M14 8h4l3 4v4h-7" /><circle cx="7" cy="18" r="2" /><circle cx="17" cy="18" r="2" />

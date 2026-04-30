@@ -3,7 +3,7 @@ import './Navbar.css'
 
 const links = [
   { href: '#servicios', label: 'Servicios' },
-  { href: '#flotas', label: 'Flotas' },
+  { href: '#flotas', label: 'Plataforma' },
   { href: '#nosotros', label: 'Nosotros' },
   { href: '#precios', label: 'Precios' },
   { href: '#contacto', label: 'Contacto' }

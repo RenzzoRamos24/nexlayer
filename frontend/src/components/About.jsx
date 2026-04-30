@@ -2,10 +2,10 @@ import useFadeIn from '../hooks/useFadeIn.js'
 import './About.css'
 
 const metrics = [
-  { value: '6+',     label: 'Años de operación' },
-  { value: '120+',   label: 'Clientes activos' },
-  { value: '850+',   label: 'Tickets resueltos / mes' },
-  { value: '99.9%',  label: 'Uptime promedio' }
+  { value: '5+',     label: 'Años de experiencia' },
+  { value: '100%',   label: 'Soporte peruano' },
+  { value: '24/7',   label: 'Acompañamiento técnico' },
+  { value: '99.9%',  label: 'Uptime objetivo' }
 ]
 
 const pillars = [
@@ -34,8 +34,9 @@ export default function About() {
             <span className="section-eyebrow fade-up">Nosotros</span>
             <h2 className="section-title fade-up">Una capa de tecnología confiable, diseñada para crecer contigo.</h2>
             <p className="section-subtitle fade-up">
-              Nacimos resolviendo problemas de TI en empresas medianas del Perú.
-              Hoy operamos infraestructura, redes y flotas para clientes que no pueden permitirse caídas.
+              Nacimos resolviendo problemas de TI en empresas peruanas. Hoy diseñamos
+              plataformas a medida con IA, automatización y soporte humano para clientes
+              que no pueden permitirse caídas.
             </p>
 
             <div className="about-metrics fade-up">
