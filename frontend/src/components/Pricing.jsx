@@ -47,8 +47,8 @@ const plans = [
   },
   {
     name: 'SaaS + IA',
-    price: 'Desde S/. 12,000',
-    period: 'por proyecto',
+    price: 'Desde S/. 5,000',
+    period: 'según evaluación y complejidad',
     summary: 'Implementación de plataformas con IA según los requerimientos de tu rubro.',
     accent: true,
     features: [
