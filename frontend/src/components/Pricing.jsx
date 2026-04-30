@@ -14,7 +14,7 @@ const plans = [
       'Hasta 5 equipos administrados',
       'Soporte remoto en horario laboral',
       'Monitoreo básico de red',
-      'Backup semanal en la nube'
+      '1 backup mensual en la nube'
     ],
     cta: 'Empezar'
   },
@@ -28,7 +28,7 @@ const plans = [
       'Hasta 15 equipos administrados',
       'Soporte 24/7 con SLA priorizado',
       'Monitoreo avanzado y alertas',
-      'Backup diario + recuperación',
+      'Backup semanal de archivos críticos + recuperación',
       'Hardening de seguridad básico'
     ],
     cta: 'Quiero este plan'
@@ -41,6 +41,7 @@ const plans = [
     features: [
       'Equipos ilimitados',
       'SLA priorizado con tiempos garantizados',
+      'Backup diario con plan de recuperación a desastres',
       'Plan de continuidad operativa',
       'Mantenimiento mensual programado',
       'Ingeniero asignado y reportes ejecutivos'

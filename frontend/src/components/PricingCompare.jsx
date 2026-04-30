@@ -18,7 +18,7 @@ const groups = [
     title: 'Monitoreo y operación',
     rows: [
       ['Monitoreo de red',          'Básico',            'Avanzado con alertas',      'Premium',               'Plataforma propia'],
-      ['Backup',                    'Semanal en nube',   'Diario + recuperación',     'Diario + DRP',          'A medida'],
+      ['Backup',                    '1 mensual en nube', 'Semanal de archivos críticos + recuperación', 'Diario + plan de recuperación a desastres', 'A medida'],
       ['Hardening de seguridad',    false,               'Básico',                    'Auditoría trimestral',  'Definido en proyecto'],
       ['Plan de continuidad',       false,               false,                       true,                    'A medida'],
       ['Mantenimiento mensual',     false,               false,                       true,                    'Post-implementación'],
@@ -39,7 +39,7 @@ const groups = [
 
 const Cell = ({ value }) => {
   if (value === true)  return <span className="cmp-mark cmp-yes" aria-label="Incluido">✓</span>
-  if (value === false) return <span className="cmp-mark cmp-no"  aria-label="No incluido">—</span>
+  if (value === false) return <span className="cmp-mark cmp-no"  aria-label="No incluido">✕</span>
   return <span className="cmp-text">{value}</span>
 }
 
