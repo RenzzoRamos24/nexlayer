@@ -27,7 +27,7 @@ export default function Navbar() {
           <span className="brand-mark">
             <img src="/favicon.svg" alt="" width="28" height="28" />
           </span>
-          <span className="brand-text">Nexlayer</span>
+          <span className="brand-text">Nex<span className="brand-text-accent">layer</span></span>
         </a>
 
         <nav className={`nav-links ${open ? 'is-open' : ''}`} aria-label="Principal">

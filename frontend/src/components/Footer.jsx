@@ -33,7 +33,7 @@ export default function Footer() {
             <span className="brand-mark">
               <img src="/favicon.svg" alt="" width="28" height="28" />
             </span>
-            <span className="brand-text">Nexlayer</span>
+            <span className="brand-text">Nex<span className="brand-text-accent">layer</span></span>
           </a>
           <p className="footer-tagline">
             Infraestructura moderna y soluciones automatizadas para empresas que no toleran caídas.

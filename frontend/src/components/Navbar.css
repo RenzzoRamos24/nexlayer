@@ -39,6 +39,8 @@
   filter: drop-shadow(0 6px 18px rgba(31, 111, 255, 0.5));
 }
 
+.brand-text-accent { color: var(--color-primary); }
+
 .nav-links {
   display: flex;
   align-items: center;
