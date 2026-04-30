@@ -7,21 +7,27 @@ import './Pricing.css'
 const plans = [
   {
     name: 'Básico',
-    price: 'S/. 550',
+    price: 'Desde S/. 550',
     period: 'por mes',
+    audience: 'Pequeñas oficinas (1–5 personas), profesionales independientes y startups.',
     summary: 'Para equipos pequeños que recién montan su operación TI.',
     features: [
       'Hasta 5 equipos administrados',
-      'Soporte remoto en horario laboral',
-      'Monitoreo básico de red',
-      '1 backup mensual en la nube'
+      'Soporte remoto L–V 9:00–18:00',
+      'Backup semanal en nube (250 GB)',
+      'Monitoreo básico con alertas',
+      'Antivirus gestionado incluido',
+      '1 visita presencial al mes',
+      'Reporte mensual básico',
+      'SLA 4 h en horario laboral'
     ],
     cta: 'Empezar'
   },
   {
     name: 'Profesional',
-    price: 'S/. 1,200',
+    price: 'Desde S/. 1,200',
     period: 'por mes',
+    audience: 'PYMES en crecimiento (5–20 personas) y comercios con varios puntos.',
     summary: 'Lo más elegido por PYMEs con varias áreas operativas.',
     featured: true,
     features: [
@@ -35,8 +41,9 @@ const plans = [
   },
   {
     name: 'Empresarial',
-    price: 'S/. 3,800',
+    price: 'Desde S/. 2,800',
     period: 'por mes',
+    audience: 'Empresas establecidas (20+ personas) e industrias críticas (salud, finanzas).',
     summary: 'Para empresas que no toleran caídas ni respuestas lentas.',
     features: [
       'Equipos ilimitados',
@@ -50,8 +57,9 @@ const plans = [
   },
   {
     name: 'SaaS + IA',
-    price: 'Desde S/. 8,000',
+    price: 'Cotización a medida',
     period: 'según evaluación y complejidad',
+    audience: 'Empresas que buscan automatizar procesos específicos con IA.',
     summary: 'Implementación de plataformas con IA según los requerimientos de tu rubro.',
     accent: true,
     features: [
@@ -63,6 +71,12 @@ const plans = [
     ],
     cta: 'Cotizar'
   }
+]
+
+const guarantees = [
+  { title: 'Garantía 30 días',           text: 'Si no estás conforme el primer mes, te devolvemos lo invertido.' },
+  { title: 'Sin permanencia inicial',    text: 'Los primeros 30 días puedes cancelar sin penalidad.' },
+  { title: 'SLA cumplido al 100%',       text: 'Si fallamos al SLA, tu siguiente mes lleva 20% de descuento.' }
 ]
 
 export default function Pricing() {
@@ -86,10 +100,11 @@ export default function Pricing() {
               key={p.name}
               className={`pricing-card fade-up ${p.featured ? 'is-featured' : ''} ${p.accent ? 'is-accent' : ''}`}
             >
-              {p.featured && <span className="pricing-badge">Más elegido</span>}
+              {p.featured && <span className="pricing-badge">⭐ Más elegido</span>}
               {p.accent   && <span className="pricing-badge pricing-badge-accent">A medida</span>}
 
               <h3 className="pricing-name">{p.name}</h3>
+              {p.audience && <p className="pricing-audience">{p.audience}</p>}
               <p className="pricing-summary">{p.summary}</p>
 
               <div className="pricing-price">
@@ -116,6 +131,25 @@ export default function Pricing() {
               </a>
             </article>
           ))}
+        </div>
+
+        <div className="pricing-guarantees fade-up">
+          <span className="pricing-guarantees-label">Garantías que aplican a todos los planes</span>
+          <div className="pricing-guarantees-grid">
+            {guarantees.map((g) => (
+              <div key={g.title} className="pricing-guarantee">
+                <span className="pricing-guarantee-icon" aria-hidden="true">
+                  <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.2" strokeLinecap="round" strokeLinejoin="round">
+                    <path d="M20 6L9 17l-5-5" />
+                  </svg>
+                </span>
+                <div>
+                  <strong>{g.title}</strong>
+                  <span>{g.text}</span>
+                </div>
+              </div>
+            ))}
+          </div>
         </div>
 
         <div className="pricing-compare-toggle fade-up">

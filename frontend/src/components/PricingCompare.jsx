@@ -7,22 +7,25 @@ const groups = [
   {
     title: 'Cobertura y soporte',
     rows: [
+      ['Público objetivo',          'Oficinas 1–5 personas', 'PYMES 5–20 personas',   'Empresas 20+ personas', 'Empresas con automatización IA'],
       ['Equipos administrados',     'Hasta 5',           'Hasta 15',                  'Ilimitados',            'A medida'],
-      ['Soporte técnico',           'Horario laboral',   '24/7 con SLA priorizado',   '24/7 dedicado',         'Post-implementación'],
+      ['Soporte técnico',           'L–V 9:00–18:00',    '24/7 con SLA priorizado',   '24/7 dedicado',         'Post-implementación'],
       ['Soporte 100% peruano',      true,                true,                        true,                    true],
       ['Ingeniero asignado',        false,               false,                       true,                    true],
-      ['Tiempos de respuesta SLA',  '4 h',               '1 h',                       '15 min',                'Definidos en contrato']
+      ['Tiempos de respuesta SLA',  '4 h',               '1 h',                       '15 min',                'Definidos en contrato'],
+      ['Visita presencial',         '1 al mes',          'Bajo demanda',              'Incluida programada',   'Según proyecto']
     ]
   },
   {
     title: 'Monitoreo y operación',
     rows: [
-      ['Monitoreo de red',          'Básico',            'Avanzado con alertas',      'Premium',               'Plataforma propia'],
-      ['Backup',                    '1 mensual en nube', 'Semanal de archivos críticos + recuperación', 'Diario + plan de recuperación a desastres', 'A medida'],
+      ['Monitoreo de red',          'Básico con alertas','Avanzado con alertas',      'Premium',               'Plataforma propia'],
+      ['Antivirus gestionado',      true,                true,                        true,                    'A medida'],
+      ['Backup',                    'Semanal en nube · 250 GB', 'Semanal de archivos críticos + recuperación', 'Diario + plan de recuperación a desastres', 'A medida'],
       ['Hardening de seguridad',    false,               'Básico',                    'Auditoría trimestral',  'Definido en proyecto'],
       ['Plan de continuidad',       false,               false,                       true,                    'A medida'],
       ['Mantenimiento mensual',     false,               false,                       true,                    'Post-implementación'],
-      ['Reportes ejecutivos',       false,               false,                       true,                    'A medida']
+      ['Reportes',                  'Mensual básico',    'Mensual con métricas',      'Ejecutivos',            'A medida']
     ]
   },
   {
