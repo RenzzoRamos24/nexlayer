@@ -6,7 +6,7 @@ const plans = [
   {
     name: 'Básico',
     price: 'S/. 550',
-    period: '/mes',
+    period: 'por mes',
     summary: 'Para equipos pequeños que recién montan su operación TI.',
     features: [
       'Hasta 5 equipos administrados',
@@ -19,7 +19,7 @@ const plans = [
   {
     name: 'Profesional',
     price: 'S/. 1,200',
-    period: '/mes',
+    period: 'por mes',
     summary: 'Lo más elegido por PYMEs con varias áreas operativas.',
     featured: true,
     features: [
@@ -34,7 +34,7 @@ const plans = [
   {
     name: 'Empresarial',
     price: 'S/. 3,800',
-    period: '/mes',
+    period: 'por mes',
     summary: 'Para empresas que no toleran caídas ni respuestas lentas.',
     features: [
       'Equipos ilimitados',
@@ -48,7 +48,7 @@ const plans = [
   {
     name: 'SaaS + IA',
     price: 'Desde S/. 12,000',
-    period: '· por proyecto',
+    period: 'por proyecto',
     summary: 'Implementación de plataformas con IA según los requerimientos de tu rubro.',
     accent: true,
     features: [
