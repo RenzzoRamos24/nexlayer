@@ -1,5 +1,7 @@
+import { useState } from 'react'
 import useFadeIn from '../hooks/useFadeIn.js'
 import SLATable from './SLATable.jsx'
+import PricingCompare from './PricingCompare.jsx'
 import './Pricing.css'
 
 const plans = [
@@ -64,6 +66,7 @@ const plans = [
 
 export default function Pricing() {
   const ref = useFadeIn()
+  const [showCompare, setShowCompare] = useState(false)
 
   return (
     <section id="precios" ref={ref}>
@@ -113,6 +116,32 @@ export default function Pricing() {
             </article>
           ))}
         </div>
+
+        <div className="pricing-compare-toggle fade-up">
+          <button
+            type="button"
+            className="btn btn-ghost"
+            aria-expanded={showCompare}
+            aria-controls="pricing-compare-panel"
+            onClick={() => setShowCompare((v) => !v)}
+          >
+            {showCompare ? 'Ocultar comparativa' : 'Ver comparativa detallada'}
+            <svg
+              width="14" height="14" viewBox="0 0 24 24" fill="none"
+              stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round"
+              style={{ transform: showCompare ? 'rotate(180deg)' : 'none', transition: 'transform 0.2s ease' }}
+              aria-hidden="true"
+            >
+              <path d="M6 9l6 6 6-6" />
+            </svg>
+          </button>
+        </div>
+
+        {showCompare && (
+          <div id="pricing-compare-panel" className="fade-up is-visible">
+            <PricingCompare />
+          </div>
+        )}
 
         <div className="fade-up">
           <SLATable />

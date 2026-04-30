@@ -116,3 +116,11 @@
 @media (max-width: 580px) {
   .pricing-grid { grid-template-columns: 1fr; }
 }
+
+.pricing-compare-toggle {
+  display: flex;
+  justify-content: center;
+  margin-top: 32px;
+}
+
+.pricing-compare-toggle .btn { gap: 8px; }
