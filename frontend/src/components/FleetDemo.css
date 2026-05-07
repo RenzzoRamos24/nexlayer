@@ -252,3 +252,11 @@
   .fleet-row { grid-template-columns: 1fr; gap: 8px; }
   .fleet-row-stats { justify-content: flex-start; flex-wrap: wrap; }
 }
+
+@media (max-width: 480px) {
+  .fleet-grid { gap: 24px; }
+  .fleet-panel { padding: 18px; width: 100%; box-sizing: border-box; }
+  .fleet-panel-summary { grid-template-columns: 1fr 1fr; }
+  .fleet-panel-head { flex-direction: column; gap: 10px; align-items: flex-start; }
+  .fleet-row { padding: 12px; }
+}

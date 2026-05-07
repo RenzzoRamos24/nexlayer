@@ -194,6 +194,11 @@
   .pricing-guarantees-grid { grid-template-columns: 1fr; gap: 16px; }
 }
 
+@media (max-width: 480px) {
+  .pricing-head { margin-bottom: 36px; }
+  .pricing-guarantees { padding: 20px; margin-top: 32px; }
+}
+
 .pricing-compare-toggle {
   display: flex;
   justify-content: center;

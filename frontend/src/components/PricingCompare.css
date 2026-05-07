@@ -4,11 +4,12 @@
   border-radius: var(--radius-lg);
   border: 1px solid var(--color-border-strong);
   background: linear-gradient(180deg, rgba(14, 26, 56, 0.5), rgba(14, 26, 56, 0.18));
+  overflow: hidden;
 }
 
 .cmp-scroll {
   overflow-x: auto;
-  margin: 0 -8px;
+  -webkit-overflow-scrolling: touch;
 }
 
 .cmp-table {
