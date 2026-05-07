@@ -104,6 +104,10 @@
   .nav-cta { display: none; }
   .burger { display: inline-flex; }
 
+  .navbar-inner {
+    padding: 0 20px;
+  }
+
   .nav-links {
     position: absolute;
     top: 100%;
