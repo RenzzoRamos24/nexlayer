@@ -39,8 +39,6 @@
 
 html {
   scroll-behavior: smooth;
-  overflow-x: hidden;
-  max-width: 100%;
 }
 
 body {
@@ -75,7 +73,6 @@ body::before {
   position: relative;
   z-index: 1;
   width: 100%;
-  overflow-x: hidden;
 }
 
 h1, h2, h3, h4 {
