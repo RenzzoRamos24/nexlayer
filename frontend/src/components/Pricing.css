@@ -24,14 +24,14 @@
 }
 
 .pricing-card.is-featured {
-  background: linear-gradient(180deg, rgba(31, 111, 255, 0.18), rgba(14, 26, 56, 0.4));
+  background: linear-gradient(180deg, rgba(47, 106, 240, 0.18), rgba(14, 26, 56, 0.4));
   border-color: var(--color-border-strong);
-  box-shadow: 0 30px 80px -25px rgba(31, 111, 255, 0.5);
+  box-shadow: 0 30px 80px -25px rgba(47, 106, 240, 0.5);
 }
 
 .pricing-card.is-accent {
-  border-color: rgba(0, 229, 160, 0.4);
-  background: linear-gradient(180deg, rgba(0, 229, 160, 0.08), rgba(14, 26, 56, 0.45));
+  border-color: rgba(34, 211, 168, 0.4);
+  background: linear-gradient(180deg, rgba(34, 211, 168, 0.08), rgba(14, 26, 56, 0.45));
 }
 
 .pricing-badge {
@@ -134,7 +134,7 @@
   padding: 28px;
   border-radius: var(--radius-lg);
   border: 1px solid var(--color-border-strong);
-  background: linear-gradient(135deg, rgba(0, 229, 160, 0.06), rgba(31, 111, 255, 0.06) 60%, rgba(14, 26, 56, 0.4));
+  background: linear-gradient(135deg, rgba(34, 211, 168, 0.06), rgba(47, 106, 240, 0.06) 60%, rgba(14, 26, 56, 0.4));
 }
 
 .pricing-guarantees-label {
@@ -166,9 +166,9 @@
   width: 36px;
   height: 36px;
   border-radius: 999px;
-  background: rgba(0, 229, 160, 0.15);
+  background: rgba(34, 211, 168, 0.15);
   color: var(--color-accent);
-  border: 1px solid rgba(0, 229, 160, 0.4);
+  border: 1px solid rgba(34, 211, 168, 0.4);
   flex-shrink: 0;
 }
 

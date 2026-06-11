@@ -67,8 +67,8 @@
 
 .sla-critical { background: rgba(255, 84, 112, 0.16); color: var(--color-danger); }
 .sla-high     { background: rgba(255, 181, 71, 0.16); color: var(--color-warning); }
-.sla-medium   { background: rgba(31, 111, 255, 0.18); color: #6BA0FF; }
-.sla-low      { background: rgba(0, 229, 160, 0.14); color: var(--color-accent); }
+.sla-medium   { background: rgba(47, 106, 240, 0.18); color: var(--color-primary-light); }
+.sla-low      { background: rgba(34, 211, 168, 0.14); color: var(--color-accent); }
 
 .sla-desc { color: var(--color-text-muted); font-size: 0.92rem; }
 .sla-time { font-family: var(--font-mono); font-size: 0.92rem; color: var(--color-text); }

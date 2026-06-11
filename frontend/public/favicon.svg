@@ -1,16 +1,24 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 1200" width="512" height="512">
-  <!-- Fondo azul redondeado -->
-  <rect width="1200" height="1200" rx="220" ry="220" fill="#2563FF"/>
-  
-  <!-- Cuadrado superior izquierdo (blanco, destacado) -->
-  <rect x="250" y="250" width="320" height="320" rx="55" ry="55" fill="#FFFFFF"/>
-  
-  <!-- Cuadrado superior derecho (azul claro) -->
-  <rect x="630" y="250" width="320" height="320" rx="55" ry="55" fill="#A8C5FF"/>
-  
-  <!-- Cuadrado inferior izquierdo (azul claro) -->
-  <rect x="250" y="630" width="320" height="320" rx="55" ry="55" fill="#A8C5FF"/>
-  
-  <!-- Cuadrado inferior derecho (azul claro, ligeramente más tenue) -->
-  <rect x="630" y="630" width="320" height="320" rx="55" ry="55" fill="#8FB5FF"/>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256">
+  <defs>
+    <radialGradient id="nx-glow" cx="50%" cy="62%" r="45%">
+      <stop offset="0%" stop-color="#22d3a8" stop-opacity="0.45"/>
+      <stop offset="100%" stop-color="#22d3a8" stop-opacity="0"/>
+    </radialGradient>
+  </defs>
+  <rect width="256" height="256" rx="56" ry="56" fill="#0A1428"/>
+  <circle cx="128" cy="166" r="82" fill="url(#nx-glow)"/>
+  <g transform="translate(18.5 6.5) scale(3)">
+    <polygon points="25.03,17.50 36.29,24.00 36.29,54.00 25.03,47.50" fill="#2453c9"/>
+    <polygon points="36.29,24.00 47.55,17.50 47.55,47.50 36.29,54.00" fill="#1a3fa6"/>
+    <polygon points="36.29,24.00 47.55,17.50 36.29,11.00 25.03,17.50" fill="#ffffff"/>
+    <polygon points="11.00,34.60 22.26,41.10 22.26,62.10 11.00,55.60" fill="#1d44b8"/>
+    <polygon points="22.26,41.10 33.52,34.60 33.52,55.60 22.26,62.10" fill="#16348f"/>
+    <polygon points="22.26,41.10 33.52,34.60 22.26,28.10 11.00,34.60" fill="#4f8bff"/>
+    <polygon points="39.06,30.60 50.32,37.10 50.32,62.10 39.06,55.60" fill="#1a3da8"/>
+    <polygon points="50.32,37.10 61.57,30.60 61.57,55.60 50.32,62.10" fill="#142e82"/>
+    <polygon points="50.32,37.10 61.57,30.60 50.32,24.10 39.06,30.60" fill="#2f6af0"/>
+    <polygon points="25.03,51.70 36.29,58.20 36.29,70.20 25.03,63.70" fill="#0fa583"/>
+    <polygon points="36.29,58.20 47.55,51.70 47.55,63.70 36.29,70.20" fill="#0b7f64"/>
+    <polygon points="36.29,58.20 47.55,51.70 36.29,45.20 25.03,51.70" fill="#22d3a8"/>
+  </g>
 </svg>

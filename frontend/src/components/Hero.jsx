@@ -16,16 +16,16 @@ export default function Hero() {
       <div className="container hero-inner">
         <span className="tag hero-tag fade-up is-visible">
           <span className="dot-pulse" />
-          Nuevo · Plataformas con IA integrada
+          Infraestructura modular · Lima · Perú
         </span>
 
         <h1 className="hero-title fade-up is-visible">
-          Plataformas a medida con <span className="text-accent">automatización e IA</span> para tu operación.
+          Mantenemos, <span className="text-accent">conectamos y automatizamos</span> tu empresa.
         </h1>
 
         <p className="hero-subtitle fade-up is-visible">
-          Construimos PaaS para cualquier rubro: integramos IA, automatizamos procesos
-          y conectamos tus sistemas. Diagnóstico previo, despliegue rápido y soporte 100% peruano.
+          Infraestructura tecnológica modular para empresas que no toleran caídas:
+          servidores, redes, backups, automatización y ciberseguridad — operados con soporte 100% peruano.
         </p>
 
         <div className="hero-actions fade-up is-visible">

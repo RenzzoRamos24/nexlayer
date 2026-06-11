@@ -53,7 +53,7 @@
 }
 
 .cmp-table tbody tr:not(.cmp-group):hover {
-  background: rgba(31, 111, 255, 0.05);
+  background: rgba(47, 106, 240, 0.05);
 }
 
 .cmp-table td,
@@ -89,9 +89,9 @@
 }
 
 .cmp-yes {
-  background: rgba(0, 229, 160, 0.15);
+  background: rgba(34, 211, 168, 0.15);
   color: var(--color-accent);
-  border: 1px solid rgba(0, 229, 160, 0.4);
+  border: 1px solid rgba(34, 211, 168, 0.4);
 }
 
 .cmp-no {

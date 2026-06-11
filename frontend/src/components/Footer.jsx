@@ -31,14 +31,17 @@ export default function Footer() {
         <div className="footer-brand">
           <a href="#top" className="brand">
             <span className="brand-mark">
-              <img src="/favicon.svg" alt="" width="28" height="28" />
+              <img src="/logo-mark.svg" alt="" width="34" height="34" />
             </span>
             <span className="brand-text">Nex<span className="brand-text-accent">layer</span></span>
           </a>
           <p className="footer-tagline">
-            Infraestructura moderna y soluciones automatizadas para empresas que no toleran caídas.
+            Mantenemos, conectamos y automatizamos tu empresa.
           </p>
-          <span className="footer-city">Lima, Perú · 2026</span>
+          <span className="footer-city">
+            <span className="dot-pulse" aria-hidden="true" />
+            Lima · Perú · 2026
+          </span>
         </div>
 
         <div className="footer-cols">

@@ -10,7 +10,7 @@
 }
 
 .navbar.is-scrolled {
-  background: rgba(6, 13, 31, 0.78);
+  background: rgba(5, 11, 28, 0.78);
   backdrop-filter: saturate(160%) blur(14px);
   -webkit-backdrop-filter: saturate(160%) blur(14px);
   border-bottom-color: var(--color-border);
@@ -36,10 +36,10 @@
 
 .brand-mark {
   display: inline-flex;
-  filter: drop-shadow(0 6px 18px rgba(31, 111, 255, 0.5));
+  filter: drop-shadow(0 6px 18px rgba(47, 106, 240, 0.5));
 }
 
-.brand-text-accent { color: var(--color-primary); }
+.brand-text-accent { color: var(--color-primary-light); }
 
 .nav-links {
   display: flex;
@@ -113,7 +113,7 @@
     top: 100%;
     left: 16px;
     right: 16px;
-    background: rgba(6, 13, 31, 0.96);
+    background: rgba(5, 11, 28, 0.96);
     backdrop-filter: blur(14px);
     border: 1px solid var(--color-border);
     border-radius: var(--radius-lg);

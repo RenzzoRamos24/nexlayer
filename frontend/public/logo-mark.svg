@@ -1,0 +1,21 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 73 81">
+  <defs>
+    <radialGradient id="nx-mark-glow">
+      <stop offset="0%" stop-color="#22d3a8" stop-opacity="0.55"/>
+      <stop offset="100%" stop-color="#22d3a8" stop-opacity="0"/>
+    </radialGradient>
+  </defs>
+  <circle cx="36.3" cy="51.7" r="26" fill="url(#nx-mark-glow)"/>
+  <polygon points="25.03,17.50 36.29,24.00 36.29,54.00 25.03,47.50" fill="#2453c9"/>
+  <polygon points="36.29,24.00 47.55,17.50 47.55,47.50 36.29,54.00" fill="#1a3fa6"/>
+  <polygon points="36.29,24.00 47.55,17.50 36.29,11.00 25.03,17.50" fill="#ffffff"/>
+  <polygon points="11.00,34.60 22.26,41.10 22.26,62.10 11.00,55.60" fill="#1d44b8"/>
+  <polygon points="22.26,41.10 33.52,34.60 33.52,55.60 22.26,62.10" fill="#16348f"/>
+  <polygon points="22.26,41.10 33.52,34.60 22.26,28.10 11.00,34.60" fill="#4f8bff"/>
+  <polygon points="39.06,30.60 50.32,37.10 50.32,62.10 39.06,55.60" fill="#1a3da8"/>
+  <polygon points="50.32,37.10 61.57,30.60 61.57,55.60 50.32,62.10" fill="#142e82"/>
+  <polygon points="50.32,37.10 61.57,30.60 50.32,24.10 39.06,30.60" fill="#2f6af0"/>
+  <polygon points="25.03,51.70 36.29,58.20 36.29,70.20 25.03,63.70" fill="#0fa583"/>
+  <polygon points="36.29,58.20 47.55,51.70 47.55,63.70 36.29,70.20" fill="#0b7f64"/>
+  <polygon points="36.29,58.20 47.55,51.70 36.29,45.20 25.03,51.70" fill="#22d3a8"/>
+</svg>

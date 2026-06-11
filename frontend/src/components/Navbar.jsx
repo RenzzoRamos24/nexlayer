@@ -25,7 +25,7 @@ export default function Navbar() {
       <div className="container navbar-inner">
         <a href="#top" className="brand" aria-label="Nexlayer">
           <span className="brand-mark">
-            <img src="/favicon.svg" alt="" width="28" height="28" />
+            <img src="/logo-mark.svg" alt="" width="34" height="34" />
           </span>
           <span className="brand-text">Nex<span className="brand-text-accent">layer</span></span>
         </a>
